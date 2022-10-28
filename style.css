@@ -8,7 +8,8 @@ li {
   list-style:none;
 }
 
-input, button {
+input, 
+button {
   outline: none;
 }
 
@@ -138,13 +139,13 @@ body {
   width: 226px;
 }
 
-.delete img {
+.delete .icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete img:hover {
+.delete .icon:hover {
   transform: rotateZ(0);
 }
 
