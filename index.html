@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="banner">
-      <img src="./eisenhower-matrix.jpg">
+      <img class="banner-content" src="./eisenhower-matrix.jpg">
       <a class="more-inf" 
           href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </div>
@@ -19,13 +19,15 @@
         </div>
       <h3 class="task-header">Todo</h3>
       <ul id="todo" class="task-list">
-        <li class="task-list-item"><input type="checkbox">
+        <li class="task-list-item">
+              <input type="checkbox" class="dismiss">
               <label class="task-title">Pay Bills</label>
               <input type="text" class="text-input">
               <button class="edit action">Edit</button>
               <button class="delete action">
               <img src="./remove.svg"></button></li>
-        <li class="task-list-item edit-mode"><input type="checkbox">
+        <li class="task-list-item edit-mode">
+              <input type="checkbox" class="dismiss">
               <label class="task-title">Go Shopping</label>
               <input type="text" value="Go Shopping" class="text-input">
               <button class="edit action">Save</button>
@@ -34,7 +36,8 @@
       </ul>
       <h3 class="task-header">Completed</h3>
       <ul id="done" class="task-list">
-        <li class="task-list-item" ><input type="checkbox" checked>
+        <li class="task-list-item" >
+              <input type="checkbox" checked class="dismiss">
               <label class="task-title">See the Doctor</label>
               <input type="text" class="text-input">
               <button class="edit action">Edit</button>
