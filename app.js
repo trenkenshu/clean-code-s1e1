@@ -15,7 +15,7 @@ var completedTasksHolder = document.getElementById("done");//completed-tasks
 //New task list item
 var createNewTaskElement = function(taskString){
   var listItem = document.createElement("li");
-  listItem.classList.add("task-list-item");
+  listItem.classList.add("task-list__item");
  
   //input (checkbox)
   var checkBox = document.createElement("input");//checkbx
@@ -34,20 +34,20 @@ var createNewTaskElement = function(taskString){
   var deleteButtonImg = document.createElement("img");//delete button image
 
   label.innerText = taskString;
-  label.className = "task-title";
+  label.className = "task-list__item-title";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
-  checkBox.className = "dismiss";
+  checkBox.className = "task-list__item-dismiss";
   editInput.type = "text";
-  editInput.className = "task text-input";
+  editInput.className = "task-list__item-input";
   
   //innerText encodes special characters, HTML does not.
   editButton.innerText = "Edit"; 
-  editButton.className = "edit action";
-  deleteButton.className = "delete action";
+  editButton.className = "task-list__item-action task-list__item-action_edit";
+  deleteButton.className = "task-list__item-action task-list__item-action_delete";
   deleteButtonImg.src="./remove.svg";
-  deleteButtonImg.className = "icon";
+  deleteButtonImg.className = "task-list__item-icon";
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -78,10 +78,10 @@ var editTask = function(){
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
   var listItem = this.parentNode;
-  var editInput = listItem.querySelector(".text-input");
-  var label = listItem.querySelector(".task-title");
-  var editBtn = listItem.querySelector(".edit");
-  var containsClass = listItem.classList.contains("edit-mode");
+  var editInput = listItem.querySelector(".task-list__item-input");
+  var label = listItem.querySelector(".task-list__item-title");
+  var editBtn = listItem.querySelector(".task-list__item-action_edit");
+  var containsClass = listItem.classList.contains("task-list__item-edit-mode");
   
   //If class of the parent is .editmode
   if(containsClass){
@@ -96,7 +96,7 @@ var editTask = function(){
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("edit-mode");
+  listItem.classList.toggle("task-list__item-edit-mode");
 };
 
 //Delete task.
@@ -145,9 +145,9 @@ var bindTaskEvents = function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   
   //select ListItems children
-  var checkBox = taskListItem.querySelector(".dismiss");
-  var editButton = taskListItem.querySelector(".edit.action");
-  var deleteButton = taskListItem.querySelector(".delete.action");
+  var checkBox = taskListItem.querySelector(".task-list__item-dismiss");
+  var editButton = taskListItem.querySelector(".task-list__item-action_edit");
+  var deleteButton = taskListItem.querySelector(".task-list__item-action_delete");
 
   //Bind editTask to edit button.
   editButton.onclick = editTask;
