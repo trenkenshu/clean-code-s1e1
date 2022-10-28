@@ -105,11 +105,6 @@ body {
   color: #333;
 }
 
-/* New Task */
-.new-task {
-  width: 318px;
-}
-
 /* Task list */
 .task-list-item {
   overflow: hidden;
