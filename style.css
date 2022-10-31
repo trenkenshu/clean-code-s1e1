@@ -9,7 +9,7 @@ li {
   list-style: none;
 }
 
-input, 
+input,
 button {
   outline: none;
 }
@@ -41,7 +41,7 @@ body {
 
 @media (max-width:768px) {
 
-  .banner { 
+  .banner {
     text-align: center;
   }
 
