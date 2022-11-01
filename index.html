@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<html lang="en">
   <head>
     <title>Todo App</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="body">
     <header class="banner">
       <img class="banner__content" src="./eisenhower-matrix.jpg" alt="Eisenhower matrix">
       <a class="banner__more-inf"
@@ -13,47 +14,47 @@
     <section class="main">
       <h3 class="main__task-header">Add Item</h3>
       <div class="task-list task-list_input-new">
-            <input id="new-task" class="task-list__item-input">
-            <button class="task-list__item-action">Add</button>
+        <input id="new-task" class="task-list__item-input">
+        <button class="task-list__item-action">Add</button>
       </div>
       <h3 class="main__task-header">Todo</h3>
       <ul id="todo" class="task-list">
         <li class="task-list__item">
-              <input type="checkbox" class="task-list__item-dismiss">
-              <label class="task-list__item-title">Kill Bill</label>
-              <input type="text" class="task-list__item-input">
-              <button class="task-list__item-action
-                      task-list__item-action_edit">Edit</button>
-              <button class="task-list__item-action
-                      task-list__item-action_delete">
-                      <img src="./remove.svg" class="task-list__item-icon" alt="Delete item">
-              </button>
+          <input type="checkbox" class="task-list__item-dismiss">
+          <label class="task-list__item-title">Kill Bill</label>
+          <input type="text" class="task-list__item-input">
+          <button class="task-list__item-action
+                  task-list__item-action_edit">Edit</button>
+          <button class="task-list__item-action
+                  task-list__item-action_delete">
+                  <img src="./remove.svg" class="task-list__item-icon" alt="Delete item">
+          </button>
         </li>
         <li class="task-list__item task-list__item-edit-mode">
-              <input type="checkbox" class="task-list__item-dismiss">
-              <label class="task-list__item-title">Go Shopping</label>
-              <input type="text" value="Go Shopping" class="task-list__item-input">
-              <button class="task-list__item-actiongot
-                      task-list__item-action_edit">Save</button>
-              <button class="task-list__item-action
-                      task-list__item-action_delete">
-                      <img src="./remove.svg" class="task-list__item-icon" alt="Delete item">
-              </button>
+          <input type="checkbox" class="task-list__item-dismiss">
+          <label class="task-list__item-title">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="task-list__item-input">
+          <button class="task-list__item-action
+                  task-list__item-action_edit">Save</button>
+          <button class="task-list__item-action
+                  task-list__item-action_delete">
+                  <img src="./remove.svg" class="task-list__item-icon" alt="Delete item">
+          </button>
         </li>
       </ul>
       <h3 class="main__task-header">Completed</h3>
       <ul id="done" class="task-list">
         <li class="task-list__item" >
-              <input type="checkbox" checked class="task-list__item-dismiss">
-              <label class="task-list__item-title">See the Doctor</label>
-              <input type="text" class="task-list__item-input">
-              <button class="task-list__item-action
-                      task-list__item-action_edit">Edit
-                      </button>
-              <button class="task-list__item-action
-                      task-list__item-action_delete">
-                    <img src="./remove.svg" class="task-list__item-icon" alt="Delete item">
-              </button>
+          <input type="checkbox" checked class="task-list__item-dismiss">
+          <label class="task-list__item-title">See the Doctor</label>
+          <input type="text" class="task-list__item-input">
+          <button class="task-list__item-action
+                  task-list__item-action_edit">Edit
+                  </button>
+          <button class="task-list__item-action
+                  task-list__item-action_delete">
+                <img src="./remove.svg" class="task-list__item-icon" alt="Delete item">
+          </button>
         </li>
       </ul>
     </section>
